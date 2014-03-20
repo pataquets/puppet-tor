@@ -8,7 +8,7 @@ class tor::client (
   exit_nodes                = '',
   entry_nodes               = '',
   new_circuit_period        = 30,
-  max_circuit_dirtiness     = 300,
+  max_circuit_dirtiness     = 600,
   strict_nodes              = 0,
   use_entry_guards          = 1,
 ) {
