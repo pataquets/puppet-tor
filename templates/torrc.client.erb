@@ -5,6 +5,9 @@ AllowDotExit <%= allow_dotexit %>
 <%- if allow_single_hop_circuits != 0 then -%>
 AllowSingleHopCircuits <%= allow_single_hop_circuits %>
 <%-   end -%>
+<%- if enforce_distinct_subnets != 1 then -%>
+EnforceDistinctSubnets <%= enforce_distinct_subnets %>
+<%-   end -%>
 <%- if exclude_single_hop_relays != 1 then -%>
 ExcludeSingleHopRelays <%= exclude_single_hop_relays %>
 <%-   end -%>
@@ -20,6 +23,15 @@ ExitNodes <%= exit_nodes %>
 <%-   if entry_nodes != '' then -%>
 EntryNodes <%= entry_nodes %>
 <%-   end -%>
+<%- if new_circuit_period != 30 then -%>
+NewCircuitPeriod <%= new_circuit_period %>
+<%-   end -%>
+<%- if max_circuit_dirtiness != 300 then -%>
+MaxCircuitDirtiness <%= max_circuit_dirtiness %>
+<%-   end -%>
 <%- if strict_nodes != 0 then -%>
 StrictNodes <%= strict_nodes %>
+<%-   end -%>
+<%- if use_entry_guards != 1 then -%>
+UseEntryGuards <%= use_entry_guards %>
 <%-   end -%>

@@ -1,12 +1,16 @@
 class tor::client (
   allow_dotexit             = 0,
   allow_single_hop_circuits = 0,
+  enforce_distinct_subnets  = 1,
   exclude_single_hop_relays = 1,
   exclude_nodes             = '',
   exclude_exit_nodes        = '',
   exit_nodes                = '',
   entry_nodes               = '',
+  new_circuit_period        = 30,
+  max_circuit_dirtiness     = 300,
   strict_nodes              = 0,
+  use_entry_guards          = 1,
 ) {
   concat::fragment { '09.client':
     ensure  => present,
