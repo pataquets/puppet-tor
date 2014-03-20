@@ -1,0 +1,25 @@
+# client
+<%- if allow_dotexit != 0 then -%>
+AllowDotExit <%= allow_dotexit %>
+<%-   end -%>
+<%- if allow_single_hop_circuits != 0 then -%>
+AllowSingleHopCircuits <%= allow_single_hop_circuits %>
+<%-   end -%>
+<%- if exclude_single_hop_relays != 1 then -%>
+ExcludeSingleHopRelays <%= exclude_single_hop_relays %>
+<%-   end -%>
+<%-   if exclude_nodes != '' then -%>
+ExcludeNodes <%= exclude_nodes %>
+<%-   end -%>
+<%-   if exclude_exit_nodes != '' then -%>
+ExcludeExitNodes <%= exclude_exit_nodes %>
+<%-   end -%>
+<%-   if exit_nodes != '' then -%>
+ExitNodes <%= exit_nodes %>
+<%-   end -%>
+<%-   if entry_nodes != '' then -%>
+EntryNodes <%= entry_nodes %>
+<%-   end -%>
+<%- if strict_nodes != 0 then -%>
+StrictNodes <%= strict_nodes %>
+<%-   end -%>
